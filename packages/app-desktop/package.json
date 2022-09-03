@@ -44,16 +44,12 @@
         {
           "target": "nsis",
           "arch": [
-            "x64",
-            "ia32",
             "arm64"
           ]
         },
         {
           "target": "portable",
           "arch": [
-            "x64",
-            "ia32",
             "arm64"
           ]
         }
