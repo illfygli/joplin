@@ -17,12 +17,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/laurent22/joplin.git"
+    "url": "git+https://github.com/illfygli/joplin.git"
   },
   "author": "Laurent Cozic",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/laurent22/joplin/issues"
+    "url": "https://github.com/illfygli/joplin/issues"
   },
   "build": {
     "appId": "net.cozic.joplin-desktop",
@@ -102,7 +102,7 @@
       "writeUpdateInfo": false
     }
   },
-  "homepage": "https://github.com/laurent22/joplin#readme",
+  "homepage": "https://github.com/illfygli/joplin#readme",
   "devDependencies": {
     "@joplin/tools": "~2.9",
     "@testing-library/react-hooks": "^3.4.2",
