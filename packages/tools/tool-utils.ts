@@ -38,7 +38,7 @@ function commandToString(commandName: string, args: string[] = []) {
 }
 
 async function insertChangelog(tag: string, changelogPath: string, changelog: string, isPrerelease: boolean, repoTagUrl: string = '') {
-	repoTagUrl = repoTagUrl || 'https://github.com/laurent22/joplin/releases/tag';
+	repoTagUrl = repoTagUrl || 'https://github.com/illfygli/joplin/releases/tag';
 
 	const currentText = await fs.readFile(changelogPath, 'UTF-8');
 	const lines = currentText.split('\n');
@@ -404,7 +404,7 @@ export async function gitHubLatestRelease(repoName: string): Promise<GitHubRelea
 	let pageNum = 1;
 
 	while (true) {
-		const response: any = await fetch(`https://api.github.com/repos/laurent22/${repoName}/releases?page=${pageNum}`, {
+		const response: any = await fetch(`https://api.github.com/repos/illfygli/${repoName}/releases?page=${pageNum}`, {
 			headers: {
 				'Content-Type': 'application/json',
 				'User-Agent': 'Joplin Readme Updater',
@@ -433,7 +433,7 @@ export async function githubRelease(project: string, tagName: string, options: a
 
 	const oauthToken = await githubOauthToken();
 
-	const response = await fetch(`https://api.github.com/repos/laurent22/${project}/releases`, {
+	const response = await fetch(`https://api.github.com/repos/illfygli/${project}/releases`, {
 		method: 'POST',
 		body: JSON.stringify({
 			tag_name: tagName,
