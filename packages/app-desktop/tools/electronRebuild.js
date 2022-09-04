@@ -44,7 +44,7 @@ async function main() {
 	if (isWindows()) {
 		// Cannot run this in parallel, or the 64-bit version might end up
 		// with 32-bit files and vice-versa
-		console.info(await execCommand(['yarn', 'run', 'electron-rebuild', forceAbiArgs, '--arch arm64'].join(' ')));
+		console.info(await execCommand(['yarn', 'run', 'electron-rebuild', forceAbiArgs, '--arch ia32'].join(' ')));
 	} else {
 		console.info(await execCommand(['yarn', 'run', 'electron-rebuild', forceAbiArgs].join(' ')));
 	}
