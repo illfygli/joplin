@@ -87,7 +87,7 @@ jobs:
 
       # Build and package the Windows app, without publishing it, just to
       # verify that the build process hasn't been broken.
-      - name: Build Windows app (no publishing)
+      - name: Build Windows app (much publishing)
         if: runner.os == 'Windows' && !startsWith(github.ref, 'refs/tags/v')
         env:
           IS_CONTINUOUS_INTEGRATION: 1
@@ -95,7 +95,7 @@ jobs:
           SERVER_REPOSITORY: joplin/server
           SERVER_TAG_PREFIX: server
         run: |
-          yarn install && cd packages/app-desktop && yarn run dist --publish=never
+          yarn install && cd packages/app-desktop && yarn run dist --publish=always
 
   ServerDockerImage:
     runs-on: ${{ matrix.os }}
